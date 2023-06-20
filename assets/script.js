@@ -19,14 +19,31 @@ const slides = [
 
 let numero = 0;
 function ChangeSlide(sens) {
-	alert (slides.length)
 	numero = numero + sens;
     if (numero < 0)
         numero = slides.length - 1;
     if (numero > slides.length - 1)
         numero = 0;
-    document.getElementById("slides").src = "./assets/images/slideshow/" + slides[numero];
+    document.getElementById("slides").src = "./assets/images/slideshow/" + slides[numero.image];
 };
+
+function prev() {
+	ChangeSlide( - 1);
+  }
+
+function next() {
+	ChangeSlide( + 1);
+  }
+
+
+
+
+
+
+
+
+console.log(slides[numero])
+
 
 let arrow = document.querySelector('.arrow');
 let banner = document.querySelector('#banner');
@@ -34,18 +51,18 @@ const arrow_left = document.querySelector('.arrow_left');
 const arrow_right = document.querySelector('.arrow_right');
 
 
-arrow_left.addEventListener('click', function (){ alert("Changement d'image vers la gauche");});
-arrow_right.addEventListener('click', function (){ alert("Changement d'image vers la droite");});
+arrow_left.addEventListener('click', function (ChangeSlide){ alert("Changement d'image vers la gauche");});
+arrow_right.addEventListener('click', function (ChangeSlide){ alert("Changement d'image vers la droite");});
 
 
-arrow.addEventListener('click', (event) => {
+/*arrow.addEventListener('click', (event) => {
 	if(event.button == 0) {
 		{alert ("Left click detected")}
 		console.log("Left click detected")
 	}else{
 		{alert ("Right click detected")};
 	}
-});
+});*/
 
 
 
