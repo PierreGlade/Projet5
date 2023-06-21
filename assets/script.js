@@ -17,14 +17,25 @@ const slides = [
 	}
 ];
 
+let arrow = document.querySelector('.arrow');
+let banner = document.querySelector('#banner');
+const arrow_left = document.querySelector('.arrow_left');
+const arrow_right = document.querySelector('.arrow_right');
+
+
+arrow_left.addEventListener('click', function (ChangeSlide){ alert("Changement d'image vers la gauche");});
+arrow_right.addEventListener('click', function (ChangeSlide){ alert("Changement d'image vers la droite");});
+
 let numero = 0;
-function ChangeSlide(sens) {
-	numero = numero + sens;
+
+
+function ChangeSlide() {
+	document.getElementById("slide"). src = "./assets/images/slideshow/" + slides[1];
+	/*numero = numero + sens;
     if (numero < 0)
         numero = slides.length - 1;
     if (numero > slides.length - 1)
-        numero = 0;
-    document.getElementById("slides").src = "./assets/images/slideshow/" + slides[numero.image];
+        numero = 0;*/
 };
 
 function prev() {
@@ -35,8 +46,9 @@ function next() {
 	ChangeSlide( + 1);
   }
 
-
-
+ChangeSlide();
+next;
+prev;
 
 
 
@@ -45,14 +57,7 @@ function next() {
 console.log(slides[numero])
 
 
-let arrow = document.querySelector('.arrow');
-let banner = document.querySelector('#banner');
-const arrow_left = document.querySelector('.arrow_left');
-const arrow_right = document.querySelector('.arrow_right');
 
-
-arrow_left.addEventListener('click', function (ChangeSlide){ alert("Changement d'image vers la gauche");});
-arrow_right.addEventListener('click', function (ChangeSlide){ alert("Changement d'image vers la droite");});
 
 
 /*arrow.addEventListener('click', (event) => {
