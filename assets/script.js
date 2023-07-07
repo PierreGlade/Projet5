@@ -32,10 +32,10 @@ function updateBullet() {
 }
 
 function updateTagLine() {
-  const tagLineElement = document.getElementById("tagLine");
-  tagLineElement.innerHTML = slides[current_slide].tagLine;
+  const tagLine = document.getElementById("tagLine");
+  tagLine.innerHTML = slides[current_slide].tagLine;
   document.getElementById("tagLine").src =
-  "./assets/images/slideshow/" + slides[current_slide].tagLine; 
+    "./assets/images/slideshow/" + slides[current_slide].tagLine;
 }
 
 function previous_slide() {
