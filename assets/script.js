@@ -64,3 +64,5 @@ function next_slide() {
 
 arrow_left.addEventListener("click", previous_slide);
 arrow_right.addEventListener("click", next_slide);
+
+//comment to update
